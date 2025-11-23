@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* index.css */
+
+body {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fef7 100%);
+}
+
+.navbar a {
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #1f4e3d;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.card:hover {
+  animation: zoomIn 0.3s ease forwards;
+}
+
+.btn {
+  border: 2px solid #3073bc;
+  color: #3073bc;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #24578d;
+  color: white;
+}
+
+
+/* SLIDING BOXES */
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f8fff9;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollLeft 20s linear infinite; /* smooth infinite loop */
+}
+
+.scroll-box {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 100px;
+  background-color: #1f4e3d;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+/* The keyframe that creates smooth motion */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+

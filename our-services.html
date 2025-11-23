@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Services | ABC Labs</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3073bc",
+              accent: "#E6F4EA",
+              blakish: "#262626",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              mont: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800">
+    <!-- NAVBAR -->
+    <nav id="navbar" class="flex justify-between items-center px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo" class="w-12 h-12 object-contain" />
+        <span class="font-bold text-lg text-primary">LABORATORY</span>
+      </div>
+
+      <ul class="flex items-center gap-8 font-medium">
+        <li><a href="index.html" class="nav-link text-white hover:underline">Home</a></li>
+        <li><a href="about.html" class="nav-link text-white hover:underline">About</a></li>
+        <li><a href="services.html" class="nav-link text-white font-semibold underline">Services</a></li>
+        <li><a href="contact.html" class="nav-link text-white hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative w-full min-h-[75vh] flex flex-col justify-center items-center text-center bg-cover bg-center" style="background-image: url('images/about-bg.jpg')">
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="relative z-10 text-white px-6 md:px-20">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 font-mont">Our <span class="text-accent">Services</span></h1>
+        <p class="max-w-2xl mx-auto text-lg md:text-xl font-light">Advanced diagnostics designed to bring clarity, care, and confidence to your health journey.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="py-20 px-6 md:px-20">
+      <h2 class="text-4xl font-bold text-primary text-center mb-12 font-mont">What We Offer</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Service Card -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/blood-diagnostics.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Blood Diagnostics</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Accurate and rapid blood analysis using modern, fully automated equipment.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/molecular-testing.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Molecular Testing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Advanced PCR and genetic testing for infectious diseases and hereditary conditions.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/cardiac.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Cardiac Screening</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Comprehensive cardiac biomarkers to assess heart performance and risks.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/pathology.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Pathology Exams</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Detailed tissue and fluid examinations performed by certified pathologists.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/health-screening.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Health Screening</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Routine wellness testing including liver, kidney, thyroid, and diabetes profiles.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
+          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
+            <img src="images/sample-collection.png" class="h-[40px]" alt="">
+          </div>
+          <h3 class="text-xl font-semibold text-primary mb-3">Home Sample Collection</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Convenient, at‑home sample pickup by trained medical professionals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="bg-accent/40 py-20 px-6 md:px-20">
+      <h2 class="text-4xl font-bold text-primary text-center mb-12 font-mont">Why Choose ABC Labs?</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
+          <h3 class="text-xl font-semibold text-primary mb-3">Certified Accuracy</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">International-quality testing standards with reproducible precision.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
+          <h3 class="text-xl font-semibold text-primary mb-3">Modern Technology</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Automated analyzers and molecular platforms ensure the fastest results.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
+          <h3 class="text-xl font-semibold text-primary mb-3">Expert Professionals</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">A skilled team of technologists, pathologists, and specialists at your service.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full h-[55vh] bg-blakish flex justify-center pb-10">
+      <div class="footer flex flex-row gap-[2rem] w-[80%] pt-8">
+        <div class="aboutUs-footer w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">About Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <p class="text-white text-[14px]">Reliable, accurate, and affordable laboratory services built on modern equipment and compassionate care.</p>
+        </div>
+
+        <div class="quick-links w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="space-y-2">
+            <a href="index.html" class="text-white block hover:font-semibold">> Home</a>
+            <a href="about.html" class="text-white block hover:font-semibold">> About</a>
+            <a href="services.html" class="text-white block hover:font-semibold">> Services</a>
+            <a href="contact.html" class="text-white block hover:font-semibold">> Contact</a>
+          </div>
+        </div>
+
+        <div class="contact-information w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Contact Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex flex-col gap-3 text-white text-[14px]">
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-location-dot text-[18px]"></i>
+              <p>Peshawar, Pakistan</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-phone text-[18px]"></i>
+              <p>03**-*******</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-envelope text-[18px]"></i>
+              <p>info@nautolabs.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="followUs-On w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex justify-center gap-4 text-white text-[25px]">
+            <i class="fa-brands fa-square-facebook hover:text-accent"></i>
+            <i class="fa-brands fa-square-instagram hover:text-accent"></i>
+            <i class="fa-brands fa-square-twitter hover:text-accent"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        const links = document.querySelectorAll(".nav-link");
+
+        if (window.scrollY > 50) {
+          nav.classList.remove("bg-transparent");
+          nav.classList.add("bg-white", "shadow-md");
+          links.forEach((l) => {
+            l.classList.remove("text-white");
+            l.classList.add("text-black");
+          });
+        } else {
+          nav.classList.remove("bg-white", "shadow-md");
+          nav.classList.add("bg-transparent");
+          links.forEach((l) => {
+            l.classList.remove("text-black");
+            l.classList.add("text-white");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

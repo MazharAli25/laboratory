@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>About | Nauto Labs</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3073bc",
+              accent: "#E6F4EA",
+              blakish: "#262626",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              mont: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800"
+  >
+    <!-- NAVBAR -->
+    <nav
+      id="navbar"
+      class="flex justify-between items-center px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="images/logo.png"
+          alt="Logo"
+          class="w-12 h-12 object-contain"
+        />
+        <span class="font-bold text-lg text-primary">LABORATORY</span>
+      </div>
+
+      <ul class="flex items-center gap-8 font-medium">
+        <li>
+          <a href="index.html" class="nav-link text-white hover:underline"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="nav-link text-white hover:underline"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="our-services.html" class="nav-link text-white"
+            >Our Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="nav-link text-white font-semibold underline"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      class="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+      style="background-image: url('images/about-bg.jpg')"
+    >
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="relative z-10 text-white px-6 md:px-20">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 font-mont">
+          Contact <span class="text-accent">ABC Labs</span>
+        </h1>
+        <p
+          class="max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed"
+        >
+          We are just a call away.
+        </p>
+        <div class="mt-8">
+          <a
+            href="index.html"
+            class="inline-block border border-accent text-white hover:bg-accent hover:text-primary px-6 py-3 rounded-full font-medium transition-all duration-300"
+            >Back to Home</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="contact-us w-full flex justify-center items-center pt-20 pb-20"
+    >
+      <div class="w-[60%] rounded-lg shadow-lg bg-white">
+        <h2 class="text-3xl font-semibold text-center my-8">Get in Touch</h2>
+        <div class="form flex justify-center items-center">
+          <form class="flex flex-col gap-6 mb-8 w-[70%]">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+            <textarea
+              rows="5"
+              placeholder="Your Message"
+              class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-primary text-white px-6 py-3 rounded-md hover:bg-accent hover:text-primary transition-all duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="mapouter"
+      style="position: relative; text-align: right; width: 500px; height: 450px"
+    >
+      <div
+        class="gmap_canvas"
+        style="
+          overflow: hidden;
+          background: none !important;
+          width: 500px;
+          height: 450px;
+        "
+      >
+        <iframe
+          width="500px"
+          height="450px"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/view?center=2H26%2B9MR%2C%20Dabgari%20Gardens%2C%20Peshawar&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        ></iframe>
+      </div>
+      <a
+        href="https://norsumediagroup.com/embed-google-map-website-free"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="gme-generated-link"
+        >Embed Map on Website for Free</a
+      >
+      <style>
+        .mapouter {
+          position: relative;
+          text-align: right;
+        }
+        .gmap_canvas {
+          overflow: hidden;
+          background: none !important;
+        }
+        .gmap_canvas iframe {
+          width: 100%;
+          height: 100%;
+        }
+        .mapouter a {
+          display: block;
+          font-size: 0.85em;
+          text-align: center;
+          padding: 5px 0;
+          color: #6c757d;
+          text-decoration: none;
+        }
+        .gme-generated-link {
+          display: none !important;
+        }
+      </style>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full h-[50vh] bg-blakish flex justify-center">
+      <div class="footer flex flex-row gap-[2rem] w-[80%] pt-8">
+        <div class="aboutUs-footer w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">About Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <p class="text-white text-[14px]">
+            Reliable, accurate, and affordable laboratory services built on
+            modern equipment and compassionate care.
+          </p>
+        </div>
+
+        <div class="quick-links w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="space-y-2">
+            <a href="index.html" class="text-white block hover:font-semibold"
+              >&gt; Home</a
+            >
+            <a href="about.html" class="text-white block hover:font-semibold"
+              >&gt; About</a
+            >
+            <a href="#" class="text-white block hover:font-semibold"
+              >&gt; Contact</a
+            >
+            <a href="#" class="text-white block hover:font-semibold"
+              >&gt; Services</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-information w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Contact Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex flex-col gap-3 text-white text-[14px]">
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-location-dot text-[18px]"></i>
+              <p>Peshawar, Pakistan</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-phone text-[18px]"></i>
+              <p>03**-*******</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-envelope text-[18px]"></i>
+              <p>info@nautolabs.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="followUs-On w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex justify-center gap-4 text-white text-[25px]">
+            <i class="fa-brands fa-square-facebook hover:text-accent"></i>
+            <i class="fa-brands fa-square-instagram hover:text-accent"></i>
+            <i class="fa-brands fa-square-twitter hover:text-accent"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("navbar");
+        const links = document.querySelectorAll(".nav-link");
+        if (window.scrollY > 50) {
+          nav.classList.remove("bg-transparent");
+          nav.classList.add("bg-white", "shadow-md");
+          links.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-black");
+          });
+        } else {
+          nav.classList.remove("bg-white", "shadow-md");
+          nav.classList.add("bg-transparent");
+          links.forEach((link) => {
+            link.classList.remove("text-black");
+            link.classList.add("text-white");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>About | Nauto Labs</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3073bc",
+              accent: "#E6F4EA",
+              blakish: "#262626",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              mont: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800"
+  >
+    <!-- NAVBAR -->
+    <nav
+      id="navbar"
+      class="flex justify-between items-center px-10 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="images/logo.png"
+          alt="Logo"
+          class="w-25 h-12 object-contain"
+        />
+        <!-- <span class="font-bold text-lg text-white" id="logo-text">LABORATORY</span> -->
+      </div>
+
+      <ul class="flex items-center gap-8 font-medium">
+        <li>
+          <a href="index.html" class="nav-link text-white hover:underline"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="nav-link text-white font-semibold underline"
+            >About</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link text-white hover:underline"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      class="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+      style="background-image: url('images/about-bg.jpg')"
+    >
+      <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+      <div class="relative z-10 text-white px-6">
+        <h1 class="text-5xl  font-extrabold mb-4 font-mont">
+          About <span class="text-accent">ABC Labs</span>
+        </h1>
+        <p
+          class="max-w-2xl mx-auto text-lg font-light leading-relaxed"
+        >
+          We merge precision diagnostics with human compassion — redefining
+          trust in modern healthcare.
+        </p>
+        <div class="mt-8">
+          <a
+            href="index.html"
+            class="inline-block border border-accent text-white hover:bg-accent hover:text-primary px-6 py-3 rounded-full font-medium transition-all duration-300"
+            >Back to Home</a
+          >
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-[100px] bg-white"></div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section
+      class="py-[6rem] px-[7rem] flex flex-row items-center justify-between gap-10"
+    >
+      <div class="w-full h-[420px] flex items-center">
+        <img
+          src="images/lab-1.jpg"
+          alt="About Lab"
+          class="w-full h-full object-cover rounded-[1rem] shadow-lg"
+        />
+      </div>
+
+      <div class="w-full space-y-6">
+        <h2 class="text-4xl font-bold text-primary font-mont">
+          Precision. Innovation. Compassion.
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed text-[16px]">
+          Yousafzai Medicare Lab & Research Center stands as a modern diagnostic
+          and research facility committed to scientific excellence, patient
+          trust, and community well-being. With advanced laboratory technology
+          and a team of skilled professionals, we provide accurate, reliable,
+          and affordable diagnostic services to communities across Khyber
+          Pakhtunkhwa. Our center is dedicated not only to clinical testing but
+          also to pioneering research that supports better healthcare outcomes.
+        </p>
+
+        <ul class="list-disc ml-5 text-gray-700 space-y-2 text-[15px]">
+          <li>Clinical Microbiology & Infectious Disease Diagnostics</li>
+          <li>Cutaneous Leishmaniasis Diagnosis & Research</li>
+          <li>Molecular Testing (PCR-based diagnostics)</li>
+          <li>Advanced Semenology & Male Infertility Investigations</li>
+          <li>Special Chemistry, Hematology & Parasitology</li>
+          <li>Research & Development in novel therapeutic approaches</li>
+        </ul>
+
+        <div class="pt-4">
+          <a
+            href="#"
+            class="btn border-2 border-primary text-primary px-6 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OWNER / FOUNDER SECTION -->
+    <section
+      class="relative bg-gradient-to-r from-accent/30 to-white py-[6rem] px-[7rem]"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-row items-center gap-12 backdrop-blur-xl bg-white/70 p-10 rounded-[2rem] shadow-xl border border-accent"
+      >
+        <!-- Owner Info -->
+        <div class="flex-1 text-gray-700">
+          <h3 class="text-4xl font-extrabold text-primary font-mont">
+            Dr. Aamir Sohail
+          </h3>
+          <p class="text-lg text-gray-600 mt-1">
+            Founder, Consultant Microbiologist and Director Lab service
+          </p>
+
+          <p class="mt-5 text-[17px] leading-relaxed">
+            The lab is led by Dr. Aamir Sohail, a PhD Medical Microbiologist,
+            Certified International Semenologist, and a seasoned diagnostic
+            expert with over <b>10 years of professional experience.</b> His
+            extensive expertise in cutaneous leishmaniasis, microbiological
+            diagnosis, PCR-based molecular testing, advanced seminology, and
+            laboratory management strengthens our mission to provide reliable
+            results and scientific excellence.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mt-6">
+            <span
+              class="inline-block bg-primary text-white text-sm px-4 py-2 rounded-full font-medium"
+              >PhD, Medical Microbiologist</span
+            >
+            <span
+              class="inline-block bg-primary text-white text-sm px-4 py-2 rounded-full font-medium"
+              >ISO 15189 Certified</span
+            >
+            <span
+              class="inline-block bg-primary text-white text-sm px-4 py-2 rounded-full font-medium"
+              >10+ Years Expertise</span
+            >
+          </div>
+
+          <!-- <div class="mt-8 flex items-center gap-4">
+            <a
+              href="#"
+              class="bg-primary text-white px-6 py-3 rounded-full shadow-md hover:bg-green-900 transition-all duration-300 flex items-center gap-2"
+            >
+              <i class="fa-brands fa-square-facebook text-white text-xl"></i> Connect
+              on Facebook
+            </a>
+            <a
+              href="#"
+              class="border-2 border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-envelope"></i> Contact
+            </a>
+          </div> -->
+        </div>
+        <!-- Owner Image -->
+        <div
+          class="flex-shrink-0 w-[320px] h-[320px] overflow-hidden rounded-[2rem] shadow-lg border-4 border-primary"
+        >
+          <img
+            src="images/doc-1.webp"
+            alt="Owner Photo"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full h-[50vh] bg-blakish flex justify-center">
+      <div class="footer flex flex-row gap-[2rem] w-[80%] pt-8">
+        <div class="aboutUs-footer w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">About Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <p class="text-white text-[14px]">
+            Reliable, accurate, and affordable laboratory services built on
+            modern equipment and compassionate care.
+          </p>
+        </div>
+
+        <div class="quick-links w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="space-y-2">
+            <a href="index.html" class="text-white block hover:font-semibold"
+              >&gt; Home</a
+            >
+            <a href="about.html" class="text-white block hover:font-semibold"
+              >&gt; About</a
+            >
+            <a href="#" class="text-white block hover:font-semibold"
+              >&gt; Contact</a
+            >
+            <a href="#" class="text-white block hover:font-semibold"
+              >&gt; Services</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-information w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Contact Us</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex flex-col gap-3 text-white text-[14px]">
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-location-dot text-[18px]"></i>
+              <p>Peshawar, Pakistan</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-phone text-[18px]"></i>
+              <p>03**-*******</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-envelope text-[18px]"></i>
+              <p>info@nautolabs.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="followUs-On w-[25%]">
+          <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex justify-center gap-4 text-white text-[25px]">
+            <i class="fa-brands fa-square-facebook hover:text-accent"></i>
+            <i class="fa-brands fa-square-instagram hover:text-accent"></i>
+            <i class="fa-brands fa-square-twitter hover:text-accent"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.getElementById("navbar");
+        const logoText = document.getElementById("logo-text");
+        const links = document.querySelectorAll(".nav-link");
+        if (window.scrollY > 50) {
+          nav.classList.remove("bg-transparent");
+          nav.classList.add("bg-[#f7f7f7]", "shadow-md");
+          links.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-black");
+          });
+          logoText.classList.remove('text-white')
+          logoText.classList.add('text-primary')
+        } else {
+          nav.classList.remove("bg-[#f7f7f7]", "shadow-md");
+          nav.classList.add("bg-transparent");
+          links.forEach((link) => {
+            link.classList.remove("text-black");
+            link.classList.add("text-white");
+          });
+          logoText.classList.remove('text-primary')
+          logoText.classList.add('text-white')
+        }
+      });
+    </script>
+  </body>
+</html>
