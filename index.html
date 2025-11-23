@@ -413,22 +413,22 @@
         menu.classList.toggle("mobile-menu-open");
 
         // Toggle Icon (Bars <-> X)
-        if (menu.classList.contains("mobile-menu-open")) {
-          // Menu OPEN: Force icon to be white X
-          icon.classList.remove("fa-bars", "text-black");
-          icon.classList.add("fa-xmark", "text-white"); 
-        } else {
-          // Menu CLOSED: Revert to Bars
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
+        // if (menu.classList.contains("mobile-menu-open")) {
+        //   // Menu OPEN: Force icon to be white X
+        //   icon.classList.remove("fa-bars", "text-black");
+        //   icon.classList.add("fa-xmark", "text-white"); 
+        // } else {
+        //   // Menu CLOSED: Revert to Bars
+        //   icon.classList.remove("fa-xmark");
+        //   icon.classList.add("fa-bars");
           
-          // Re-apply correct color based on scroll position
-          if (window.scrollY > 50) {
-            icon.classList.add("text-black");
-          } else {
-            icon.classList.add("text-white");
-          }
-        }
+        //   // Re-apply correct color based on scroll position
+        //   if (window.scrollY > 50) {
+        //     icon.classList.add("text-black");
+        //   } else {
+        //     icon.classList.add("text-white");
+        //   }
+        // }
       });
 
       // Close menu when a link inside it is clicked
