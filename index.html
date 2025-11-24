@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Yousafzai Labs</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/index.css">
-    
+    <link rel="stylesheet" href="css/index.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -22,11 +22,11 @@
           extend: {
             // CUSTOM BREAKPOINT: 375px
             screens: {
-              'xs': '500px', 
+              xs: "500px",
             },
             colors: {
-              primary: "#3073bc", 
-              accent: "#E6F4EA", 
+              primary: "#3073bc",
+              accent: "#E6F4EA",
               blakish: "#262626",
               navBg: "#f7f7f7",
             },
@@ -43,8 +43,13 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
-      * { padding: 0; margin: 0; }
-      body { scroll-behavior: smooth; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        scroll-behavior: smooth;
+      }
 
       /* Mobile Menu Animation State */
       .mobile-menu-open {
@@ -53,8 +58,12 @@
 
       /* Hover Zoom Animation for Cards */
       @keyframes zoomIn {
-        from { transform: scale(1); }
-        to { transform: scale(1.05); }
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
       }
       .card:hover {
         animation: zoomIn 0.3s ease forwards;
@@ -78,8 +87,9 @@
     </style>
   </head>
 
-  <body class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800 relative">
-
+  <body
+    class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800 relative"
+  >
     <nav
       id="navbar"
       class="flex justify-between items-center px-6 xs:px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500"
@@ -93,34 +103,86 @@
       </div>
 
       <ul class="hidden xs:flex items-center gap-4 md:gap-8 font-medium">
-        <li><a href="#" class="nav-link text-white hover:font-semibold transition-colors underline font-semibold">Home</a></li>
-        <li><a href="about.html" class="nav-link text-white hover:font-semibold transition-colors hover:underline">About</a></li>
-        <li><a href="our-services.html" class="nav-link text-white hover:font-semibold transition-colors hover:underline">Our Services</a></li>
+        <li>
+          <a
+            href="#"
+            class="nav-link text-white hover:font-semibold transition-colors underline font-semibold"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="our-services.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >Our Services</a
+          >
+        </li>
         <!-- <li><a href="our-team.html" class="nav-link text-white hover:font-semibold transition-colors hover:underline">Our Team</a></li> -->
-        <li><a href="contact.html" class="nav-link text-white hover:font-semibold transition-colors hover:underline">Contact</a></li>
+        <li>
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >Contact</a
+          >
+        </li>
       </ul>
 
-      <button id="hamburger-btn" class="xs:hidden z-50 focus:outline-none group">
-        <i id="hamburger-icon" class="fa-solid fa-bars text-black text-2xl transition-colors duration-300"></i>
+      <button
+        id="hamburger-btn"
+        class="xs:hidden z-50 focus:outline-none group"
+      >
+        <i
+          id="hamburger-icon"
+          class="fa-solid fa-bars text-black text-2xl transition-colors duration-300"
+        ></i>
       </button>
     </nav>
 
-    <div 
-      id="mobile-menu" 
+    <div
+      id="mobile-menu"
       class="fixed top-0 left-0 w-full h-screen bg-primary/95 backdrop-blur-sm z-40 transform -translate-y-full transition-transform duration-500 ease-in-out xs:hidden flex flex-col justify-center items-center gap-8 shadow-xl"
     >
-      <a href="#" class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors">Home</a>
-      <a href="about.html" class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors">About</a>
-      <a href="our-services.html" class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors">Our Services</a>
+      <a
+        href="#"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Home</a
+      >
+      <a
+        href="about.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >About</a
+      >
+      <a
+        href="our-services.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Our Services</a
+      >
       <!-- <a href="our-team.html" class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors">Our Team</a> -->
-      <a href="contact.html" class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors">Contact</a>
+      <a
+        href="contact.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Contact</a
+      >
     </div>
 
-    <section class="relative flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-10 md:px-20 pt-[6rem] pb-10 overflow-hidden bg-[#f7f7f7]">
-      <div class="absolute top-0 right-0 w-[10vw] md:w-1/2 h-full bg-primary rounded-bl-[2rem] hidden md:block z-1"></div>
+    <section
+      class="relative flex flex-col-reverse md:flex-row items-center justify-between min-h-screen px-10 md:px-20 pt-[6rem] pb-10 overflow-hidden bg-[#f7f7f7]"
+    >
+      <div
+        class="absolute top-0 right-0 w-[10vw] md:w-1/2 h-full bg-primary rounded-bl-[2rem] hidden md:block z-1"
+      ></div>
 
       <div class="w-full md:w-1/2 z-10 space-y-6">
-        <h1 class="text-4xl xs:text-5xl md:text-6xl font-extrabold leading-tight font-mont">
+        <h1
+          class="text-4xl xs:text-5xl md:text-6xl font-extrabold leading-tight font-mont"
+        >
           YousafZai Medical<br />
           <span class="text-primary"> Laboratory </span>
         </h1>
@@ -130,7 +192,11 @@
         </p>
 
         <div class="flex items-center gap-4 mt-4">
-          <a href="contact.html" class="bg-primary text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[#24578d] transition-all duration-300">Contact Us</a>
+          <a
+            href="contact.html"
+            class="bg-primary text-white px-6 py-3 rounded-full font-medium shadow hover:bg-[#24578d] transition-all duration-300"
+            >Contact Us</a
+          >
         </div>
 
         <div class="flex gap-8 mt-8 text-gray-700">
@@ -145,23 +211,45 @@
         </div>
       </div>
 
-      <div class="w-full md:w-1/2 flex justify-center mr-[5vw] md:justify-end gap-6 md:gap-10 mb-10 md:mb-0 z-20">
+      <div
+        class="w-full md:w-1/2 flex justify-center mr-[5vw] md:justify-end gap-6 md:gap-10 mb-10 md:mb-0 z-20"
+      >
         <div class="space-y-4">
-          <img src="images/doctor.jpg" alt="Doctor" class="rounded-2xl shadow-lg w-64 md:w-72 object-cover mt-20" />
+          <img
+            src="images/doctor.jpg"
+            alt="Doctor"
+            class="rounded-2xl shadow-lg w-64 md:w-72 object-cover mt-20"
+          />
         </div>
         <div class="space-y-4">
-          <img src="images/patient-test.jpg" alt="Patient Test" class="rounded-2xl h-[40vh] md:h-[60vh] mt-10 shadow-lg w-64 md:w-72 object-cover" />
-          <img src="images/test-kit.jpg" alt="Test Kit" class="rounded-2xl shadow-lg w-64 md:w-72 object-cover" />
+          <img
+            src="images/patient-test.jpg"
+            alt="Patient Test"
+            class="rounded-2xl h-[40vh] md:h-[60vh] mt-10 shadow-lg w-64 md:w-72 object-cover"
+          />
+          <img
+            src="images/test-kit.jpg"
+            alt="Test Kit"
+            class="rounded-2xl shadow-lg w-64 md:w-72 object-cover"
+          />
         </div>
       </div>
     </section>
 
-    <div class="Equipments py-[5rem] px-[2rem] md:px-[7rem] min-h-[100vh] flex flex-col md:flex-row gap-10 justify-evenly items-center">
+    <div
+      class="Equipments py-[5rem] px-[2rem] md:px-[7rem] min-h-[100vh] flex flex-col md:flex-row gap-10 justify-evenly items-center"
+    >
       <div class="equipments-img w-full md:w-[30vw] h-auto">
-        <img src="images/euipments-img.jpg" alt="" class="h-full w-full rounded-lg object-cover" />
+        <img
+          src="images/euipments-img.jpg"
+          alt=""
+          class="h-full w-full rounded-lg object-cover"
+        />
       </div>
       <div class="equipment-content w-full md:w-[40%]">
-        <h2 class="font-bold text-[25px]">Innovating Diagnostics with Care and Precision</h2>
+        <h2 class="font-bold text-[25px]">
+          Innovating Diagnostics with Care and Precision
+        </h2>
         <p class="mt-4">
           We’re redefining healthcare by combining cutting-edge technology with
           a human touch — ensuring every test delivers accuracy, empathy, and
@@ -170,27 +258,44 @@
         <h3 class="font-bold text-[18px] pt-4">At a Glance:</h3>
         <ul class="pt-2 list-disc ml-5 space-y-2">
           <li>
-            <span class="font-semibold">Get Your Results Online:</span> View or download your lab reports anytime using your receipt or report number.
+            <span class="font-semibold">Get Your Results Online:</span> View or
+            download your lab reports anytime using your receipt or report
+            number.
           </li>
           <li>
-            <span class="font-semibold">Home Sample Collection:</span> Schedule a hassle-free home visit via WhatsApp or a quick call — comfort meets convenience.
+            <span class="font-semibold">Home Sample Collection:</span> Schedule
+            a hassle-free home visit via WhatsApp or a quick call — comfort
+            meets convenience.
           </li>
           <li>
-            <span class="font-semibold">Community Outreach:</span> Supporting health initiatives for SoS orphans and the Mahsood Welfare Association.
+            <span class="font-semibold">Community Outreach:</span> Supporting
+            health initiatives for SoS orphans and the Mahsood Welfare
+            Association.
           </li>
           <li>
-            <span class="font-semibold">Always Open:</span> Our labs operate 24/7, so you can access care whenever you need it.
+            <span class="font-semibold">Always Open:</span> Our labs operate
+            24/7, so you can access care whenever you need it.
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="home-sample bg-primary w-full min-h-[30rem] py-[3rem] px-[2rem] md:px-[7rem] flex flex-col md:flex-row items-center justify-evenly gap-8">
+    <div
+      class="home-sample bg-primary w-full min-h-[30rem] py-[3rem] px-[2rem] md:px-[7rem] flex flex-col md:flex-row items-center justify-evenly gap-8"
+    >
       <div class="sample-img w-full md:w-[40%] h-auto">
-        <img src="images/home-sample.jpg" class="w-full h-full rounded-[10px] object-cover" alt="" />
+        <img
+          src="images/home-sample.jpg"
+          class="w-full h-full rounded-[10px] object-cover"
+          alt=""
+        />
       </div>
-      <div class="sample-content w-full md:w-[40%] border border-1 border-white rounded-[0.6rem] text-white p-10 flex flex-col justify-center">
-        <h1 class="font-bold text-[25px] text-center">Convenient Home Sampling</h1>
+      <div
+        class="sample-content w-full md:w-[40%] border border-1 border-white rounded-[0.6rem] text-white p-10 flex flex-col justify-center"
+      >
+        <h1 class="font-bold text-[25px] text-center">
+          Convenient Home Sampling
+        </h1>
         <p class="text-center pt-5">
           Your health shouldn’t wait for your schedule. Our skilled
           phlebotomists bring the lab to your doorstep with complete hygiene and
@@ -201,44 +306,85 @@
     </div>
 
     <div class="services w-full pt-20 pb-10 bg-gray-100">
-      <div class="container w-full h-full flex flex-col justify-center items-center">
+      <div
+        class="container w-full h-full flex flex-col justify-center items-center"
+      >
         <h1 class="text-[2rem] text-black font-bold">Services We Offer</h1>
         <div class="underline border-t border-2 border-black w-[20%]"></div>
-        
-        <div class="services-cards w-[90%] flex justify-evenly flex-wrap gap-4 py-5 mt-3">
-          
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-vial-virus text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Pathology</h1></div>
-          </div>
-          
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-flask text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Microbiology</h1></div>
+
+        <div
+          class="services-cards w-[90%] flex justify-evenly flex-wrap gap-4 py-5 mt-3"
+        >
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-vial-virus text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Pathology</h1>
+            </div>
           </div>
 
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-dna text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Molecular</h1></div>
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-flask text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Microbiology</h1>
+            </div>
           </div>
 
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-heart-pulse text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Hematology</h1></div>
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-dna text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Molecular</h1>
+            </div>
           </div>
 
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-microscope text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Histopathology</h1></div>
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-heart-pulse text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Hematology</h1>
+            </div>
           </div>
 
-          <div class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8">
-            <div class="card-head"><i class="fa-solid fa-notes-medical text-[3rem] text-primary"></i></div>
-            <div class="card-body"><h1 class="text-[22px] font-bold">Clinical Pathology</h1></div>
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-microscope text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Histopathology</h1>
+            </div>
+          </div>
+
+          <div
+            class="card bg-white rounded-lg shadow-lg w-full sm:w-[45%] md:w-[30%] flex flex-col justify-center text-center gap-3 py-8"
+          >
+            <div class="card-head">
+              <i class="fa-solid fa-notes-medical text-[3rem] text-primary"></i>
+            </div>
+            <div class="card-body">
+              <h1 class="text-[22px] font-bold">Clinical Pathology</h1>
+            </div>
           </div>
 
           <div class="btn mt-8 mb-4">
-            <a href="our-services.html" class="text-[16px] font-semibold">View All Services</a>
+            <a href="our-services.html" class="text-[16px] font-semibold"
+              >View All Services</a
+            >
           </div>
         </div>
       </div>
@@ -247,45 +393,64 @@
     <div class="reviews flex flex-col items-center justify-center mt-10 mb-20">
       <h1 class="text-[2rem] text-black font-bold">What Our Clients Say</h1>
       <div class="underline border-t border-2 border-black w-[20%] mb-10"></div>
-      
-      <div class="review-container w-[90%] flex flex-row justify-center flex-wrap gap-6">
-        
-        <div class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg">
+
+      <div
+        class="review-container w-[90%] flex flex-row justify-center flex-wrap gap-6"
+      >
+        <div
+          class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg"
+        >
           <div class="card-body px-5 py-2 w-full sm:w-[85%]">
             <span class="font-bold text-[16px] block">Dr. Amjad Dawar</span>
             <span class="text-[14px] text-gray-600">Medical Specialist</span>
             <p class="mt-2 text-[14px]">
-              Yousafzai Medicare Lab & Research Center has consistently delivered accurate and detailed diagnostic reports. Truly reliable and professional.
+              Yousafzai Medicare Lab & Research Center has consistently
+              delivered accurate and detailed diagnostic reports. Truly reliable
+              and professional.
             </p>
           </div>
         </div>
 
-        <div class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg">
+        <div
+          class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg"
+        >
           <div class="card-body px-5 py-2 w-full sm:w-[85%]">
             <span class="font-bold text-[16px] block">Dr. Majid Paracha</span>
-            <span class="text-[14px] text-gray-600">Skin Specialist & HOD, LRH</span>
+            <span class="text-[14px] text-gray-600"
+              >Skin Specialist & HOD, LRH</span
+            >
             <p class="mt-2 text-[14px]">
-              I regularly send cutaneous leishmaniasis samples to Yousafzai Medicare Lab. I am fully satisfied with their quality and commitment.
+              I regularly send cutaneous leishmaniasis samples to Yousafzai
+              Medicare Lab. I am fully satisfied with their quality and
+              commitment.
             </p>
           </div>
         </div>
 
-        <div class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg">
+        <div
+          class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg"
+        >
           <div class="card-body px-5 py-2 w-full sm:w-[85%]">
-            <span class="font-bold text-[16px] block">Dr. Ibrahim Yousafzai</span>
+            <span class="font-bold text-[16px] block"
+              >Dr. Ibrahim Yousafzai</span
+            >
             <span class="text-[14px] text-gray-600">Senior Andrologist</span>
             <p class="mt-2 text-[14px]">
-              No lab in Khyber Pakhtunkhwa matches the level of expertise offered by Yousafzai Medicare Lab. Excellent work.
+              No lab in Khyber Pakhtunkhwa matches the level of expertise
+              offered by Yousafzai Medicare Lab. Excellent work.
             </p>
           </div>
         </div>
 
-        <div class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg">
+        <div
+          class="review-card w-full md:w-[45%] flex flex-col sm:flex-row shadow-lg px-4 py-4 bg-white rounded-lg"
+        >
           <div class="card-body px-5 py-2 w-full sm:w-[85%]">
             <span class="font-bold text-[16px] block">Dr. John Doe</span>
             <span class="text-[14px] text-gray-600">Skin Specialist</span>
             <p class="mt-2 text-[14px]">
-              Their expertise in gastrointestinal-related laboratory testing has greatly supported my clinical decisions.
+              Their expertise in gastrointestinal-related laboratory testing has
+              greatly supported my clinical decisions.
             </p>
           </div>
         </div>
@@ -293,67 +458,82 @@
     </div>
 
     <div class="whatsapp">
-      <a href="https://wa.me/923158282574" class="flex items-center justify-center" target="_blank">
+      <a
+        href="https://wa.me/923158282574"
+        class="flex items-center justify-center"
+        target="_blank"
+      >
         <i class="fa-brands fa-whatsapp text-white text-4xl whatsapp-icon"></i>
       </a>
     </div>
 
-    <div class="footer-section w-full bg-blakish flex justify-center py-10">
-      <div class="footer flex flex-col md:flex-row gap-[2rem] w-[90%] md:w-[80%] pt-8">
-        
-        <div class="aboutUs-footer w-full md:w-[25%]">
+    <footer
+      class="w-full h-auto sm:h-[55vh] bg-blakish flex justify-center py-10"
+    >
+      <div
+        class="footer flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-[2rem] w-[90%] sm:w-[80%] pt-8"
+      >
+        <div class="aboutUs-footer w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">About Us</h3>
-          <div class="underline border-t border-1 border-gray-400 w-[100%] mb-5 mt-2"></div>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
           <p class="text-white text-[14px]">
-            Yousafzai Medicare Lab provides advanced, affordable diagnostics and impactful research to enhance healthcare quality and community well-being.
+            Yousafzai Medicare Lab provides advanced, affordable diagnostics and
+            impactful research to enhance healthcare quality and community
+            well-being.
           </p>
         </div>
 
-        <div class="quick-links w-full md:w-[25%]">
+        <div class="quick-links w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
-          <div class="underline border-t border-1 border-gray-400 w-[100%] mb-5 mt-2"></div>
-          <div class="content space-y-2">
-            <a href="index.html" class="text-white hover:font-semibold block"><span class="text-[16px] mr-2">></span> Home</a>
-            <div class="border-t border-gray-600 w-full"></div>
-            <a href="about.html" class="text-white hover:font-semibold block"><span class="text-[16px] mr-2">></span> About</a>
-            <div class="border-t border-gray-600 w-full"></div>
-            <a href="#" class="text-white hover:font-semibold block"><span class="text-[16px] mr-2">></span> Contact</a>
-            <div class="border-t border-gray-600 w-full"></div>
-            <a href="#" class="text-white hover:font-semibold block"><span class="text-[16px] mr-2">></span> Services</a>
-            <div class="border-t border-gray-600 w-full"></div>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="space-y-2 text-sm">
+            <a href="index.html" class="text-white block hover:font-semibold"
+              >&gt; Home</a
+            >
+            <a href="about.html" class="text-white block hover:font-semibold"
+              >&gt; About</a
+            >
+            <a href="services.html" class="text-white block hover:font-semibold"
+              >&gt; Services</a
+            >
+            <a href="contact.html" class="text-white block hover:font-semibold"
+              >&gt; Contact</a
+            >
           </div>
         </div>
 
-        <div class="contact-information w-full md:w-[25%]">
+        <div class="contact-information w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Contact Us</h3>
-          <div class="underline border-t border-1 border-gray-400 w-[100%] mb-5 mt-2"></div>
-          <div class="content flex flex-col gap-3">
-            <div class="address flex gap-4">
-              <i class="fa-solid fa-location-dot text-white pt-1 text-[18px]"></i>
-              <p class="text-white text-[12px]">Peshawar, Khyber Pakhtunkhwa, Pakistan</p>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div class="flex flex-col gap-3 text-white text-[14px]">
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-location-dot text-[18px]"></i>
+              <p>Peshawar, Pakistan</p>
             </div>
-            <div class="contact flex gap-4">
-              <i class="fa-solid fa-phone text-white pt-1 text-[18px]"></i>
-              <p class="text-white text-[12px]">03**-*******</p>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-phone text-[18px]"></i>
+              <p>03158282574</p>
             </div>
-            <div class="email flex gap-4">
-              <i class="fa-solid fa-envelope text-white pt-1 text-[18px]"></i>
-              <p class="text-white text-[12px]">Info@gmail.com</p>
+            <div class="flex gap-3 items-start">
+              <i class="fa-solid fa-envelope text-[18px]"></i>
+              <p>malazaikhan13@gmail.com</p>
             </div>
           </div>
         </div>
 
-        <div class="followUs-On w-full md:w-[25%]">
+        <div class="followUs-On w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
-          <div class="underline border-t border-1 border-gray-400 w-[100%] mb-5 mt-2"></div>
-          <div class="content flex justify-start gap-4">
-            <a href="#" class="text-white"><i class="fa-brands fa-square-facebook text-[30px]"></i></a>
-            <a href="#" class="text-white"><i class="fa-brands fa-square-instagram text-[30px]"></i></a>
-            <a href="#" class="text-white"><i class="fa-brands fa-square-twitter text-[30px]"></i></a>
+          <div class="border-t border-gray-400 mb-5 mt-2"></div>
+          <div
+            class="flex justify-start sm:justify-center gap-4 text-white text-[25px]"
+          >
+            <a href="https://www.facebook.com/share/1GCBnPqLg5/?mibextid=wwXIfr"><i class="fa-brands fa-square-facebook hover:text-accent"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram hover:text-accent"></i></a>
+            <a href=""><i class="fa-brands fa-square-twitter hover:text-accent"></i></a>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
 
     <script>
       // 1. SCROLL EFFECT FOR NAVBAR
@@ -378,7 +558,6 @@
             // hamburgerIcon.classList.remove("text-white");
             // hamburgerIcon.classList.add("text-black");
           }
-
         } else {
           nav.classList.remove("bg-navBg", "shadow-md");
           nav.classList.add("bg-transparent");
@@ -411,12 +590,12 @@
         if (menu.classList.contains("mobile-menu-open")) {
           // Menu OPEN: Force icon to be white X
           icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark", "text-white"); 
+          icon.classList.add("fa-xmark", "text-white");
         } else {
           // Menu CLOSED: Revert to Bars
-          icon.classList.remove("fa-xmark", 'text-white');
+          icon.classList.remove("fa-xmark", "text-white");
           icon.classList.add("fa-bars");
-          
+
           // Re-apply correct color based on scroll position
           // if (window.scrollY > 50) {
           //   icon.classList.add("text-black");
@@ -427,17 +606,17 @@
       });
 
       // Close menu when a link inside it is clicked
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
           menu.classList.remove("mobile-menu-open");
           icon.classList.remove("fa-xmark");
           icon.classList.add("fa-bars");
-          
+
           if (window.scrollY > 50) {
-             icon.classList.remove("text-white");
-             icon.classList.add("text-black");
+            icon.classList.remove("text-white");
+            icon.classList.add("text-black");
           } else {
-             icon.classList.add("text-black");
+            icon.classList.add("text-black");
           }
         });
       });
