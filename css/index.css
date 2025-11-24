@@ -95,19 +95,37 @@ body {
   }
 }
 
-@media (max-width: 375px){
-  /* .hamburger.active  */
-  #navbar{
-    background-color: #3073bc;
-  }
-  .navlinks{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 10000px !important;
-    width: 100%;
-    background-color: #3073bc;
+.whatsapp{
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #19a04a;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: 0 4px 8px rgba(25, 160, 74);
+  z-index: 20;
+}
+
+.whatsapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  font-size: 16px;
+}
+
+.whatsapp-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 400px) {
+  .whatsapp{
+    opacity: 1;
   }
 }
 
