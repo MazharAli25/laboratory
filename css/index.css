@@ -40,7 +40,7 @@ body {
   animation: zoomIn 0.3s ease forwards;
 }
 
-.btn {
+/* .btn {
   border: 2px solid #3073bc;
   color: #3073bc;
   background-color: transparent;
@@ -48,11 +48,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 .btn:hover {
   background-color: #2d6eb3;
   color: white;
+  border-radius: 10px;
 }
 
 
