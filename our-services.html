@@ -4,17 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/index.css" />
     <title>Services | ABC Labs</title>
+
+    <style>
+      /* Custom CSS for Mobile Menu Transition */
+      .mobile-menu-open {
+        transform: translateY(0%) !important;
+      }
+    </style>
 
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            screens: {
+              // Re-defined custom breakpoint
+              xs: "400px",
+            },
             colors: {
               primary: "#3073bc",
               accent: "#E6F0FA",
               blakish: "#262626",
+              // Re-added navBg for consistency
+              navBg: "#f7f7f7",
             },
             fontFamily: {
               sans: ["Poppins", "sans-serif"],
@@ -26,130 +46,340 @@
     </script>
   </head>
 
-  <body class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800">
-    <!-- NAVBAR -->
-    <nav id="navbar" class="flex justify-between items-center px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500">
-      <div class="flex items-center gap-3">
-        <img src="images/logo.png" alt="Logo" class="w-12 h-12 object-contain" />
-        <span class="font-bold text-lg text-primary">LABORATORY</span>
+  <body
+    class="font-sans bg-gradient-to-b from-white to-[#F8FFF9] text-gray-800"
+  >
+    <nav
+      id="navbar"
+      class="flex justify-between items-center px-6 xs:px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500"
+    >
+      <div class="flex items-center gap-3 z-50">
+        <img
+          src="images/logo.png"
+          alt="Logo"
+          class="w-30 h-12 object-contain"
+        />
       </div>
 
-      <ul class="flex items-center gap-8 font-medium">
-        <li><a href="index.html" class="nav-link text-white hover:underline">Home</a></li>
-        <li><a href="about.html" class="nav-link text-white hover:underline">About</a></li>
-        <li><a href="services.html" class="nav-link text-white font-semibold underline">Services</a></li>
-        <li><a href="contact.html" class="nav-link text-white hover:underline">Contact</a></li>
+      <ul class="hidden xs:flex items-center gap-4 md:gap-8 font-medium">
+        <li>
+          <a
+            href="#"
+            class="nav-link text-white hover:font-semibold transition-colors underline font-semibold"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="our-services.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >Our Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="our-team.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >Our Team</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:font-semibold transition-colors hover:underline"
+            >Contact</a
+          >
+        </li>
       </ul>
+
+      <button
+        id="hamburger-btn"
+        class="xs:hidden z-50 focus:outline-none group"
+      >
+        <i
+          id="hamburger-icon"
+          class="fa-solid fa-bars text-white text-2xl transition-colors duration-300"
+        ></i>
+      </button>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="relative w-full min-h-[75vh] flex flex-col justify-center items-center text-center bg-cover bg-center" style="background-image: url('images/about-bg.jpg')">
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-full h-screen bg-primary/95 backdrop-blur-sm z-40 transform -translate-y-full transition-transform duration-500 ease-in-out xs:hidden flex flex-col justify-center items-center gap-8 shadow-xl"
+    >
+      <a
+        href="#"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Home</a
+      >
+      <a
+        href="about.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >About</a
+      >
+      <a
+        href="our-services.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Our Services</a
+      >
+      <a
+        href="our-team.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Our Team</a
+      >
+      <a
+        href="contact.html"
+        class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
+        >Contact</a
+      >
+    </div>
+
+    <section
+      class="relative w-full min-h-[60vh] sm:min-h-[75vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+      style="background-image: url('images/about-bg.jpg')"
+    >
       <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
       <div class="relative z-10 text-white px-6 md:px-20">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 font-mont">Our <span class="text-accent">Services</span></h1>
-        <p class="max-w-2xl mx-auto text-lg md:text-xl font-light">Advanced diagnostics designed to bring clarity, care, and confidence to your health journey.</p>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 font-mont"
+        >
+          Our <span class="text-accent">Services</span>
+        </h1>
+        <p class="max-w-2xl mx-auto text-base sm:text-lg font-light">
+          Advanced diagnostics designed to bring clarity, care, and confidence
+          to your health journey.
+        </p>
       </div>
     </section>
 
-    <!-- SERVICES GRID -->
-    <section class="py-20 px-6 md:px-20">
-      <h2 class="text-4xl font-bold text-primary text-center mb-12 font-mont">What We Offer</h2>
+    <section class="py-16 sm:py-20 px-6 md:px-20">
+      <h2
+        class="text-3xl sm:text-4xl font-bold text-primary text-center mb-10 sm:mb-12 font-mont"
+      >
+        What We Offer
+      </h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Service Card -->
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/blood-diagnostics.png" class="h-[40px]" alt="">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10"
+      >
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img
+              src="images/blood-diagnostics.png"
+              class="h-8 sm:h-[40px]"
+              alt=""
+            />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Blood Diagnostics</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Accurate and rapid blood analysis using modern, fully automated equipment.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Blood Diagnostics
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Accurate and rapid blood analysis using modern, fully automated
+            equipment.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/molecular-testing.png" class="h-[40px]" alt="">
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img
+              src="images/molecular-testing.png"
+              class="h-8 sm:h-[40px]"
+              alt=""
+            />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Molecular Testing</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Advanced PCR and genetic testing for infectious diseases and hereditary conditions.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Molecular Testing
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Advanced PCR and genetic testing for infectious diseases and
+            hereditary conditions.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/cardiac.png" class="h-[40px]" alt="">
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img src="images/cardiac.png" class="h-8 sm:h-[40px]" alt="" />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Cardiac Screening</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Comprehensive cardiac biomarkers to assess heart performance and risks.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Cardiac Screening
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Comprehensive cardiac biomarkers to assess heart performance and
+            risks.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/pathology.png" class="h-[40px]" alt="">
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img src="images/pathology.png" class="h-8 sm:h-[40px]" alt="" />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Pathology Exams</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Detailed tissue and fluid examinations performed by certified pathologists.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Pathology Exams
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Detailed tissue and fluid examinations performed by certified
+            pathologists.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/health-screening.png" class="h-[40px]" alt="">
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img
+              src="images/health-screening.png"
+              class="h-8 sm:h-[40px]"
+              alt=""
+            />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Health Screening</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Routine wellness testing including liver, kidney, thyroid, and diabetes profiles.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Health Screening
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Routine wellness testing including liver, kidney, thyroid, and
+            diabetes profiles.
+          </p>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40">
-          <div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mb-5">
-            <img src="images/sample-collection.png" class="h-[40px]" alt="">
+        <div
+          class="flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-accent/40"
+        >
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center mb-4 sm:mb-5"
+          >
+            <img
+              src="images/sample-collection.png"
+              class="h-8 sm:h-[40px]"
+              alt=""
+            />
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-3">Home Sample Collection</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Convenient, at‑home sample pickup by trained medical professionals.</p>
+          <h3
+            class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3"
+          >
+            Home Sample Collection
+          </h3>
+          <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
+            Convenient, at‑home sample pickup by trained medical professionals.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="bg-accent/40 py-20 px-6 md:px-20">
-      <h2 class="text-4xl font-bold text-primary text-center mb-12 font-mont">Why Choose ABC Labs?</h2>
+    <section class="bg-accent/40 py-16 sm:py-20 px-6 md:px-20">
+      <h2
+        class="text-3xl sm:text-4xl font-bold text-primary text-center mb-10 sm:mb-12 font-mont"
+      >
+        Why Choose ABC Labs?
+      </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
-          <h3 class="text-xl font-semibold text-primary mb-3">Certified Accuracy</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">International-quality testing standards with reproducible precision.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10">
+        <div
+          class="p-6 sm:p-8 bg-white rounded-2xl shadow-lg border border-accent/50"
+        >
+          <h3 class="text-lg sm:text-xl font-semibold text-primary mb-3">
+            Certified Accuracy
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            International-quality testing standards with reproducible precision.
+          </p>
         </div>
 
-        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
-          <h3 class="text-xl font-semibold text-primary mb-3">Modern Technology</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">Automated analyzers and molecular platforms ensure the fastest results.</p>
+        <div
+          class="p-6 sm:p-8 bg-white rounded-2xl shadow-lg border border-accent/50"
+        >
+          <h3 class="text-lg sm:text-xl font-semibold text-primary mb-3">
+            Modern Technology
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Automated analyzers and molecular platforms ensure the fastest
+            results.
+          </p>
         </div>
 
-        <div class="p-8 bg-white rounded-2xl shadow-lg border border-accent/50">
-          <h3 class="text-xl font-semibold text-primary mb-3">Expert Professionals</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">A skilled team of technologists, pathologists, and specialists at your service.</p>
+        <div
+          class="p-6 sm:p-8 bg-white rounded-2xl shadow-lg border border-accent/50"
+        >
+          <h3 class="text-lg sm:text-xl font-semibold text-primary mb-3">
+            Expert Professionals
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            A skilled team of technologists, pathologists, and specialists at
+            your service.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="w-full h-[55vh] bg-blakish flex justify-center pb-10">
-      <div class="footer flex flex-row gap-[2rem] w-[80%] pt-8">
-        <div class="aboutUs-footer w-[25%]">
+    <footer
+      class="w-full h-auto sm:h-[55vh] bg-blakish flex justify-center py-10"
+    >
+      <div
+        class="footer flex flex-col sm:flex-row gap-8 sm:gap-4 md:gap-[2rem] w-[90%] sm:w-[80%] pt-8"
+      >
+        <div class="aboutUs-footer w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">About Us</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
-          <p class="text-white text-[14px]">Reliable, accurate, and affordable laboratory services built on modern equipment and compassionate care.</p>
+          <p class="text-white text-[14px]">
+            Reliable, accurate, and affordable laboratory services built on
+            modern equipment and compassionate care.
+          </p>
         </div>
 
-        <div class="quick-links w-[25%]">
+        <div class="quick-links w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
-          <div class="space-y-2">
-            <a href="index.html" class="text-white block hover:font-semibold">> Home</a>
-            <a href="about.html" class="text-white block hover:font-semibold">> About</a>
-            <a href="services.html" class="text-white block hover:font-semibold">> Services</a>
-            <a href="contact.html" class="text-white block hover:font-semibold">> Contact</a>
+          <div class="space-y-2 text-sm">
+            <a href="index.html" class="text-white block hover:font-semibold"
+              >&gt; Home</a
+            >
+            <a href="about.html" class="text-white block hover:font-semibold"
+              >&gt; About</a
+            >
+            <a href="services.html" class="text-white block hover:font-semibold"
+              >&gt; Services</a
+            >
+            <a href="contact.html" class="text-white block hover:font-semibold"
+              >&gt; Contact</a
+            >
           </div>
         </div>
 
-        <div class="contact-information w-[25%]">
+        <div class="contact-information w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Contact Us</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
           <div class="flex flex-col gap-3 text-white text-[14px]">
@@ -168,10 +398,12 @@
           </div>
         </div>
 
-        <div class="followUs-On w-[25%]">
+        <div class="followUs-On w-full sm:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
-          <div class="flex justify-center gap-4 text-white text-[25px]">
+          <div
+            class="flex justify-start sm:justify-center gap-4 text-white text-[25px]"
+          >
             <i class="fa-brands fa-square-facebook hover:text-accent"></i>
             <i class="fa-brands fa-square-instagram hover:text-accent"></i>
             <i class="fa-brands fa-square-twitter hover:text-accent"></i>
@@ -181,25 +413,107 @@
     </footer>
 
     <script>
-      window.addEventListener("scroll", () => {
+      // 1. SCROLL EFFECT FOR NAVBAR
+      window.addEventListener("scroll", function () {
         const nav = document.getElementById("navbar");
         const links = document.querySelectorAll(".nav-link");
+        const logoText = document.getElementById("logo-text");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const mobileMenu = document.getElementById("mobile-menu");
 
         if (window.scrollY > 50) {
           nav.classList.remove("bg-transparent");
-          nav.classList.add("bg-white", "shadow-md");
-          links.forEach((l) => {
-            l.classList.remove("text-white");
-            l.classList.add("text-black");
+          nav.classList.add("bg-navBg", "shadow-md");
+
+          // Desktop Links turn black
+          links.forEach((link) => {
+            link.classList.remove("text-white");
+            link.classList.add("text-black");
           });
+          
+          // Logo text turns primary color
+
+
+          // Change Hamburger Icon to black ONLY if menu is closed
+          if (!mobileMenu.classList.contains("mobile-menu-open")) {
+            hamburgerIcon.classList.remove("text-white");
+            hamburgerIcon.classList.add("text-black");
+          }
+
         } else {
-          nav.classList.remove("bg-white", "shadow-md");
+          nav.classList.remove("bg-navBg", "shadow-md");
           nav.classList.add("bg-transparent");
-          links.forEach((l) => {
-            l.classList.remove("text-black");
-            l.classList.add("text-white");
+
+          // Desktop Links turn white (Hero background is dark)
+          links.forEach((link) => {
+            link.classList.remove("text-black");
+            link.classList.add("text-white");
           });
+
+
+          // Change Hamburger Icon to white ONLY if menu is closed
+          if (!mobileMenu.classList.contains("mobile-menu-open")) {
+            hamburgerIcon.classList.remove("text-black");
+            hamburgerIcon.classList.add("text-white");
+          }
         }
+      });
+
+      // 2. HAMBURGER MENU TOGGLE LOGIC
+      const btn = document.getElementById("hamburger-btn");
+      const menu = document.getElementById("mobile-menu");
+      const icon = document.getElementById("hamburger-icon");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      btn.addEventListener("click", () => {
+        // Toggle the slide class
+        menu.classList.toggle("mobile-menu-open");
+
+        // Toggle Icon (Bars <-> X)
+        if (menu.classList.contains("mobile-menu-open")) {
+          // Menu OPEN: Force icon to be white X
+          icon.classList.remove("fa-bars", "text-black");
+          icon.classList.add("fa-xmark", "text-white"); 
+
+          if(window.scrollY > 50) {
+            icon.classList.remove("text-white");
+            icon.classList.add("text-black");
+          } else {
+            icon.classList.remove("text-black");
+            icon.classList.add("text-white");
+          }
+        } else {
+          // Menu CLOSED: Revert to Bars
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+          
+          // Re-apply correct color based on scroll position
+          if (window.scrollY > 50) {
+            icon.classList.remove("text-white"); // Ensure white is removed if scrolling
+            icon.classList.add("text-black");
+          } else {
+            icon.classList.remove("text-black"); // Ensure black is removed if at top
+            icon.classList.add("text-white");
+          }
+        }
+      });
+
+      // Close menu when a link inside it is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove("mobile-menu-open");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+          
+          // Fix icon color after closing menu
+          if (window.scrollY > 50) {
+             icon.classList.add("text-black");
+             icon.classList.remove("text-white");
+          } else {
+             icon.classList.add("text-white");
+             icon.classList.remove("text-black");
+          }
+        });
       });
     </script>
   </body>
