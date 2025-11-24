@@ -27,12 +27,12 @@
         theme: {
           extend: {
             screens: {
-              'xs': '400px',
+              xs: "400px",
             },
             colors: {
               primary: "#3073bc",
               // Changed accent to a bluish tint for consistency (as discussed previously)
-              accent: "#E6F0FA", 
+              accent: "#E6F0FA",
               blakish: "#262626",
               navBg: "#f7f7f7", // Added navBg for cleaner JS scroll handling
             },
@@ -51,7 +51,7 @@
   >
     <nav
       id="navbar"
-      class="flex justify-between items-center px-6 xs:px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-500 xs:bg-navBg"
+      class="flex justify-between items-center px-6 xs:px-10 md:px-20 py-5 fixed top-0 left-0 w-full z-50 transition-all duration-500  xs:bg-transparent /* Desktop: Starts transparent */ xs:shadow-none"
     >
       <div class="flex items-center gap-3 z-50">
         <img
@@ -129,11 +129,11 @@
         class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
         >Our Services</a
       >
-      <a
+      <!-- <a
         href="our-team.html"
         class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
         >Our Team</a
-      >
+      > -->
       <a
         href="contact.html"
         class="mobile-link text-white text-2xl font-bold hover:text-gray-200 transition-colors"
@@ -150,7 +150,9 @@
         <h1 class="text-4xl xs:text-5xl font-extrabold mb-4 font-mont">
           About <span class="text-accent">Us</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-base xs:text-lg font-light leading-relaxed">
+        <p
+          class="max-w-2xl mx-auto text-base xs:text-lg font-light leading-relaxed"
+        >
           We merge precision diagnostics with human compassion — redefining
           trust in modern healthcare.
         </p>
@@ -191,7 +193,9 @@
           also to pioneering research that supports better healthcare outcomes.
         </p>
 
-        <ul class="list-disc ml-5 text-gray-700 space-y-2 text-sm md:text-[15px]">
+        <ul
+          class="list-disc ml-5 text-gray-700 space-y-2 text-sm md:text-[15px]"
+        >
           <li>Clinical Microbiology & Infectious Disease Diagnostics</li>
           <li>Cutaneous Leishmaniasis Diagnosis & Research</li>
           <li>Molecular Testing (PCR-based diagnostics)</li>
@@ -217,10 +221,10 @@
       <div
         class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-12 backdrop-blur-xl bg-white/70 p-6 md:p-10 rounded-[2rem] shadow-xl border border-accent"
       >
-        
-
         <div class="flex-1 text-gray-700">
-          <h3 class="text-3xl md:text-4xl font-extrabold text-primary font-mont">
+          <h3
+            class="text-3xl md:text-4xl font-extrabold text-primary font-mont"
+          >
             Dr. Aamir Sohail
           </h3>
           <p class="text-base md:text-lg text-gray-600 mt-1">
@@ -238,14 +242,14 @@
           </p>
 
           <div
-          class="flex-shrink-0 w-full md:w-[320px] h-[320px] overflow-hidden rounded-[2rem] shadow-lg border-4 border-primary mt-4"
-        >
-          <img
-            src="images/doc-1.webp"
-            alt="Owner Photo"
-            class="w-full h-full object-cover"
-          />
-        </div>
+            class="flex-shrink-0 w-full md:w-[320px] h-[320px] overflow-hidden rounded-[2rem] shadow-lg border-4 border-primary mt-4"
+          >
+            <img
+              src="images/doc-1.webp"
+              alt="Owner Photo"
+              class="w-full h-full object-cover"
+            />
+          </div>
           <div class="flex flex-wrap gap-3 mt-6">
             <span
               class="inline-block bg-primary text-white text-xs md:text-sm px-3 py-1 md:px-4 md:py-2 rounded-full font-medium"
@@ -265,8 +269,9 @@
     </section>
 
     <footer class="w-full bg-blakish flex justify-center py-10">
-      <div class="footer flex flex-col md:flex-row gap-8 md:gap-[2rem] w-[90%] md:w-[80%] pt-8">
-        
+      <div
+        class="footer flex flex-col md:flex-row gap-8 md:gap-[2rem] w-[90%] md:w-[80%] pt-8"
+      >
         <div class="aboutUs-footer w-full md:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">About Us</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
@@ -280,16 +285,24 @@
           <h3 class="text-white text-[20px] font-semibold">Quick Links</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
           <div class="space-y-2">
-            <a href="index.html" class="text-white block hover:font-semibold text-sm"
+            <a
+              href="index.html"
+              class="text-white block hover:font-semibold text-sm"
               >&gt; Home</a
             >
-            <a href="about.html" class="text-white block hover:font-semibold text-sm"
+            <a
+              href="about.html"
+              class="text-white block hover:font-semibold text-sm"
               >&gt; About</a
             >
-            <a href="contact.html" class="text-white block hover:font-semibold text-sm"
+            <a
+              href="contact.html"
+              class="text-white block hover:font-semibold text-sm"
               >&gt; Contact</a
             >
-            <a href="our-services.html" class="text-white block hover:font-semibold text-sm"
+            <a
+              href="our-services.html"
+              class="text-white block hover:font-semibold text-sm"
               >&gt; Services</a
             >
           </div>
@@ -317,7 +330,9 @@
         <div class="followUs-On w-full md:w-[25%]">
           <h3 class="text-white text-[20px] font-semibold">Follow Us On</h3>
           <div class="border-t border-gray-400 mb-5 mt-2"></div>
-          <div class="flex justify-start md:justify-center gap-4 text-white text-[25px]">
+          <div
+            class="flex justify-start md:justify-center gap-4 text-white text-[25px]"
+          >
             <i class="fa-brands fa-square-facebook hover:text-accent"></i>
             <i class="fa-brands fa-square-instagram hover:text-accent"></i>
             <i class="fa-brands fa-square-twitter hover:text-accent"></i>
@@ -344,16 +359,14 @@
             link.classList.remove("text-white");
             link.classList.add("text-black");
           });
-          
-          // Logo text turns primary color
 
+          // Logo text turns primary color
 
           // Change Hamburger Icon to black ONLY if menu is closed
           if (!mobileMenu.classList.contains("mobile-menu-open")) {
             hamburgerIcon.classList.remove("text-white");
             hamburgerIcon.classList.add("text-black");
           }
-
         } else {
           nav.classList.remove("bg-navBg", "shadow-md");
           nav.classList.add("bg-transparent");
@@ -363,7 +376,6 @@
             link.classList.remove("text-black");
             link.classList.add("text-white");
           });
-
 
           // Change Hamburger Icon to white ONLY if menu is closed
           if (!mobileMenu.classList.contains("mobile-menu-open")) {
@@ -387,9 +399,9 @@
         if (menu.classList.contains("mobile-menu-open")) {
           // Menu OPEN: Force icon to be white X
           icon.classList.remove("fa-bars", "text-black");
-          icon.classList.add("fa-xmark", "text-white"); 
+          icon.classList.add("fa-xmark", "text-white");
 
-          if(window.scrollY > 50) {
+          if (window.scrollY > 50) {
             icon.classList.remove("text-white");
             icon.classList.add("text-black");
           } else {
@@ -400,7 +412,7 @@
           // Menu CLOSED: Revert to Bars
           icon.classList.remove("fa-xmark");
           icon.classList.add("fa-bars");
-          
+
           // Re-apply correct color based on scroll position
           if (window.scrollY > 50) {
             icon.classList.remove("text-white"); // Ensure white is removed if scrolling
@@ -413,19 +425,19 @@
       });
 
       // Close menu when a link inside it is clicked
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
           menu.classList.remove("mobile-menu-open");
           icon.classList.remove("fa-xmark");
           icon.classList.add("fa-bars");
-          
+
           // Fix icon color after closing menu
           if (window.scrollY > 50) {
-             icon.classList.add("text-black");
-             icon.classList.remove("text-white");
+            icon.classList.add("text-black");
+            icon.classList.remove("text-white");
           } else {
-             icon.classList.add("text-white");
-             icon.classList.remove("text-black");
+            icon.classList.add("text-white");
+            icon.classList.remove("text-black");
           }
         });
       });
