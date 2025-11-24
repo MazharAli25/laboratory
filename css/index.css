@@ -123,10 +123,20 @@ body {
   z-index: 1000;
 }
 
+
+
 @media screen and (max-width: 400px) {
   .whatsapp{
     opacity: 1;
   }
+  
+  /* #navbar{
+    width: 100vw;
+  }
+
+  .hero{
+    width: 100vw;
+  } */
 }
 
 
